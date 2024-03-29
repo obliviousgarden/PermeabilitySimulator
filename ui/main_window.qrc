@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="Icon">
+    <file>img/ブラン.ico</file>
+  </qresource>
+</RCC>

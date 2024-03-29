@@ -1,0 +1,52 @@
+{
+    "alpha": {
+        "description": "damping factor",
+        "name": "alpha",
+        "symbol": "α",
+        "from_value": 0.0,
+        "to_value": 1.0,
+        "default_value": 0.1,
+        "unit": "1",
+        "is_log": false
+    },
+    "he": {
+        "description": "external magnetic field",
+        "name": "he",
+        "symbol": "He",
+        "from_value": 0.0,
+        "to_value": 2000.0,
+        "default_value": 0.0,
+        "unit": "kA/m",
+        "is_log": false
+    },
+    "phi_0": {
+        "description": "angle between e.a. and the production of Magnetization(M) on xy-plane",
+        "name": "phi_0",
+        "symbol": "ϕ_0",
+        "from_value": 0.0,
+        "to_value": 6.28318530718,
+        "default_value": 0.0,
+        "unit": "rad.",
+        "is_log": false
+    },
+    "delta": {
+        "description": "angle between e.a. and the External Magnetic Field(He)",
+        "name": "delta",
+        "symbol": "δ",
+        "from_value": 0.0,
+        "to_value": 6.28318530718,
+        "default_value": 0.0,
+        "unit": "rad.",
+        "is_log": false
+    },
+    "beta": {
+        "description": "angle between e.a. and the High_Frequency Field(h)",
+        "name": "beta",
+        "symbol": "β",
+        "from_value": 0.0,
+        "to_value": 6.28318530718,
+        "default_value": 0.0,
+        "unit": "rad.",
+        "is_log": false
+    }
+}

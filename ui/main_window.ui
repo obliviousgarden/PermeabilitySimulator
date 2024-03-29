@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <author>Cheng WANG</author>
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1681</width>
+    <height>857</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>850</width>
+    <height>850</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Times New Roman</family>
+    <pointsize>12</pointsize>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+    <stylestrategy>PreferDefault</stylestrategy>
+    <kerning>true</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dielectric Relaxation Simulator by 王誠</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="main_window.qrc">
+    <normaloff>:/Icon/img/ブラン.ico</normaloff>:/Icon/img/ブラン.ico</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
+    <item>
+     <widget class="QGroupBox" name="groupBox_intro">
+      <property name="title">
+       <string>What am I?</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_intro">
+         <item>
+          <widget class="QRadioButton" name="radioButton_intro_en">
+           <property name="text">
+            <string>English</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_intro_cn">
+           <property name="text">
+            <string>汉语</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_intro_jp">
+           <property name="text">
+            <string>日本語</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_intro"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="3,3">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_11" stretch="0">
+        <item>
+         <widget class="QTabWidget" name="tabs">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>15</pointsize>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab_wang">
+           <attribute name="title">
+            <string>WANG</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_8" stretch="1">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_d_1234" stretch="8">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_d_123">
+                <item>
+                 <widget class="QGroupBox" name="GroupBox_step1">
+                  <property name="font">
+                   <font>
+                    <family>Times New Roman</family>
+                    <pointsize>15</pointsize>
+                    <italic>true</italic>
+                    <stylestrategy>PreferDefault</stylestrategy>
+                   </font>
+                  </property>
+                  <property name="autoFillBackground">
+                   <bool>true</bool>
+                  </property>
+                  <property name="title">
+                   <string>STEP.3 Data to be Fitted</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_4">
+                   <item>
+                    <layout class="QVBoxLayout" name="Layout_step1" stretch="0,0,0,0,0,0">
+                     <item>
+                      <widget class="QGroupBox" name="GroupBox_device">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="title">
+                        <string>Device</string>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_3">
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QRadioButton" name="RadioButton_device_impedance">
+                          <property name="text">
+                           <string>Impedance Analyzer</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="RadioButton_device_lcr">
+                          <property name="text">
+                           <string>LCR Meter</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="RadioButton_other">
+                          <property name="text">
+                           <string>Other</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="Layout_step1_file">
+                       <item>
+                        <widget class="QPushButton" name="PushButton_file">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>false</italic>
+                           <stylestrategy>PreferDefault</stylestrategy>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="text">
+                          <string>File...</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="PushButton_dir">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>false</italic>
+                           <stylestrategy>PreferDefault</stylestrategy>
+                          </font>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="text">
+                          <string>Dir...</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="Layout_step1_datapos" stretch="1,1">
+                       <item>
+                        <widget class="QGroupBox" name="GroupBox_step1_f">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>false</italic>
+                          </font>
+                         </property>
+                         <property name="title">
+                          <string>Frequency (f)</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_22" stretch="0,0">
+                          <item>
+                           <widget class="QLabel" name="Label_step1_f_info">
+                            <property name="text">
+                             <string>*Input info. of 1st f.</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <layout class="QFormLayout" name="FormLayout_step1_f">
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="Label_step1_f_row">
+                              <property name="text">
+                               <string>Row :</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="LineEdit_step1_f_row">
+                              <property name="text">
+                               <string>0</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="Label_step1_f_col">
+                              <property name="text">
+                               <string>Col :</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="Label_step1_f_unit">
+                              <property name="text">
+                               <string>Unit : </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="LineEdit_step1_f_col">
+                              <property name="text">
+                               <string>0</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QComboBox" name="ComboBox_step1_f_unit"/>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QGroupBox" name="GroupBox_step1_Cp">
+                         <property name="font">
+                          <font>
+                           <pointsize>12</pointsize>
+                           <italic>false</italic>
+                          </font>
+                         </property>
+                         <property name="title">
+                          <string>Capacitance parallel (Cp)</string>
+                         </property>
+                         <layout class="QVBoxLayout" name="verticalLayout_23">
+                          <item>
+                           <widget class="QLabel" name="Label_step1_Cp_info">
+                            <property name="text">
+                             <string>*Input info. of 1st Cp.</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item>
+                           <layout class="QFormLayout" name="FormLayout_step1_Cp">
+                            <item row="0" column="0">
+                             <widget class="QLabel" name="Label_step1_Cp_row">
+                              <property name="text">
+                               <string>Row :</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="0" column="1">
+                             <widget class="QLineEdit" name="LineEdit_step1_Cp_row">
+                              <property name="text">
+                               <string>0</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="0">
+                             <widget class="QLabel" name="Label_step1_Cp_col">
+                              <property name="text">
+                               <string>Col :</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="0">
+                             <widget class="QLabel" name="Label_step1_Cp_unit">
+                              <property name="text">
+                               <string>Unit : </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="1" column="1">
+                             <widget class="QLineEdit" name="LineEdit_step1_Cp_col">
+                              <property name="text">
+                               <string>0</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item row="2" column="1">
+                             <widget class="QComboBox" name="ComboBox_step1_Cp_unit"/>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QGroupBox" name="GroupBox_dependent">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="title">
+                        <string>dependent on</string>
+                       </property>
+                       <property name="checkable">
+                        <bool>true</bool>
+                       </property>
+                       <property name="checked">
+                        <bool>false</bool>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_4">
+                        <property name="leftMargin">
+                         <number>11</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QRadioButton" name="RadioButton_dependent_H">
+                          <property name="text">
+                           <string>H</string>
+                          </property>
+                          <property name="checked">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="RadioButton_dependent_Co">
+                          <property name="text">
+                           <string>x_Co</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="RadioButton_dependent_DCB">
+                          <property name="text">
+                           <string>DCB</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="Label_step1_filename">
+                       <property name="font">
+                        <font>
+                         <pointsize>12</pointsize>
+                         <italic>false</italic>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>*Filename eg.: #S888-Pt-E0-88888Oe-Co8.8-DCB8.8</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="PushButton_fit">
+                       <property name="font">
+                        <font>
+                         <family>Times New Roman</family>
+                         <pointsize>15</pointsize>
+                         <weight>75</weight>
+                         <italic>true</italic>
+                         <bold>true</bold>
+                         <stylestrategy>PreferDefault</stylestrategy>
+                        </font>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
+                       <property name="text">
+                        <string>STEP.4 Fit!!!</string>
+                       </property>
+                       <property name="autoDefault">
+                        <bool>false</bool>
+                       </property>
+                       <property name="default">
+                        <bool>false</bool>
+                       </property>
+                       <property name="flat">
+                        <bool>false</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_shimada">
+           <attribute name="title">
+            <string>SHIMADA</string>
+           </attribute>
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,1,0,1">
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="label_fieldinfo">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Field Information</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout" columnstretch="1,2,2,2">
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetMaximumSize</enum>
+                </property>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineEdit_shimada_alpha_from"/>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_shimada_alpha">
+                  <property name="text">
+                   <string>α</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QLineEdit" name="lineEdit_shimada_alpha_to"/>
+                </item>
+                <item row="0" column="3">
+                 <widget class="QPushButton" name="pushButton_shimada_alpha">
+                  <property name="text">
+                   <string>UPDATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_shimada_phi_0">
+                  <property name="text">
+                   <string>ϕ_0</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_shimada_he">
+                  <property name="text">
+                   <string>He[A/m]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="label_shimada_beta">
+                  <property name="text">
+                   <string>β</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
+                 <widget class="QLabel" name="label_shimada_delta">
+                  <property name="text">
+                   <string>δ</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="2">
+                 <widget class="QLineEdit" name="lineEdit_shimada_delta_to"/>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="lineEdit_shimada_he_from"/>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QLineEdit" name="lineEdit_shimada_delta_from"/>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QLineEdit" name="lineEdit_shimada_phi_0_from"/>
+                </item>
+                <item row="2" column="2">
+                 <widget class="QLineEdit" name="lineEdit_shimada_he_to"/>
+                </item>
+                <item row="4" column="2">
+                 <widget class="QLineEdit" name="lineEdit_shimada_phi_0_to"/>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QLineEdit" name="lineEdit_shimada_beta_from"/>
+                </item>
+                <item row="4" column="3">
+                 <widget class="QPushButton" name="pushButton_shimada_phi_0">
+                  <property name="text">
+                   <string>UPDATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="2">
+                 <widget class="QLineEdit" name="lineEdit_shimada_beta_to"/>
+                </item>
+                <item row="2" column="3">
+                 <widget class="QPushButton" name="pushButton_shimada_he">
+                  <property name="text">
+                   <string>UPDATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="3">
+                 <widget class="QPushButton" name="pushButton_shimada_delta">
+                  <property name="text">
+                   <string>UPDATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1" colspan="3">
+                 <widget class="QSlider" name="horizontalSlider_shimada_he">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="9" column="1" colspan="3">
+                 <widget class="QSlider" name="horizontalSlider_shimada_beta">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1" colspan="3">
+                 <widget class="QSlider" name="horizontalSlider_shimada_phi_0">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="3">
+                 <widget class="QPushButton" name="pushButton_shimada_beta">
+                  <property name="text">
+                   <string>UPDATE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1" colspan="3">
+                 <widget class="QSlider" name="horizontalSlider_shimada_delta">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="3">
+                 <widget class="QSlider" name="horizontalSlider_shimada_alpha">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLineEdit" name="lineEdit_shimada_alpha_value"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLineEdit" name="lineEdit_shimada_he_value"/>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLineEdit" name="lineEdit_shimada_phi_0_value"/>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLineEdit" name="lineEdit_shimada_delta_value"/>
+                </item>
+                <item row="9" column="0">
+                 <widget class="QLineEdit" name="lineEdit_shimada_beta_value"/>
+                </item>
+               </layout>
+              </item>
+              <item alignment="Qt::AlignHCenter">
+               <widget class="QLabel" name="label_sampleinfo">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Sample Information</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,1">
+                <item>
+                 <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+                  <item>
+                   <widget class="QTabWidget" name="tabWidget">
+                    <property name="currentIndex">
+                     <number>1</number>
+                    </property>
+                    <widget class="QWidget" name="tab_sampleinfo_wang">
+                     <attribute name="title">
+                      <string>WANG</string>
+                     </attribute>
+                    </widget>
+                    <widget class="QWidget" name="tab_sampleinfo_ohnuma">
+                     <attribute name="title">
+                      <string>OHNUMA</string>
+                     </attribute>
+                     <layout class="QFormLayout" name="formLayout">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="label_info_ohnuma_ms">
+                        <property name="text">
+                         <string>Saturation Magnetization (Ms) [kG]</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="1">
+                       <widget class="QLineEdit" name="lineEdit_info_ohnuma_ms"/>
+                      </item>
+                      <item row="1" column="0">
+                       <widget class="QLabel" name="label_info_ohnuma_hk">
+                        <property name="text">
+                         <string>Knee Point (Hk) [Oe]</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="1" column="1">
+                       <widget class="QLineEdit" name="lineEdit_info_ohnuma_hk"/>
+                      </item>
+                      <item row="2" column="0">
+                       <widget class="QLabel" name="label_info_ohnuma_rho">
+                        <property name="text">
+                         <string>Electrical Resistivity (ρ) [μΩ*cm]</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="2" column="1">
+                       <widget class="QLineEdit" name="lineEdit_info_ohnuma_rho"/>
+                      </item>
+                      <item row="3" column="0">
+                       <widget class="QLabel" name="label_info_ohnuma_t">
+                        <property name="text">
+                         <string>Thickness (t) [nm]</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="3" column="1">
+                       <widget class="QLineEdit" name="lineEdit_info_ohnuma_t"/>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox">
+                    <property name="title">
+                     <string>Frequency</string>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_3" rowminimumheight="1,1,0">
+                     <item row="2" column="0">
+                      <widget class="QLineEdit" name="lineEdit_sampleinfo_freq_from"/>
+                     </item>
+                     <item row="2" column="1" colspan="2">
+                      <widget class="QLineEdit" name="lineEdit_sampleinfo_freq_to"/>
+                     </item>
+                     <item row="2" column="3">
+                      <widget class="QSpinBox" name="spinBox_sampleinfo_freq_nums">
+                       <property name="minimum">
+                        <number>100</number>
+                       </property>
+                       <property name="maximum">
+                        <number>1000</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>100</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label">
+                       <property name="text">
+                        <string>FROM</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QLabel" name="label_3">
+                       <property name="text">
+                        <string>POINTS</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>TO</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QGridLayout" name="gridLayout_2">
+                  <item row="1" column="1">
+                   <widget class="QPushButton" name="pushButton_sampleinfo_update">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>UPDATE</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QPushButton" name="pushButton_sampleinfo_add">
+                    <property name="text">
+                     <string>ADD</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="2">
+                   <widget class="QPushButton" name="pushButton_sampleinfo_delete">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>DELETE</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="3">
+                   <widget class="QListView" name="listView_sampleinfo">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_plot" native="true"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1681</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSaveResultsAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <addaction name="actionParameter_Setting"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSetting"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionSaveResultsAs">
+   <property name="text">
+    <string>Save Results As...</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionParameter_Setting">
+   <property name="text">
+    <string>Parameter Setting...</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>PushButton_file</tabstop>
+  <tabstop>PushButton_dir</tabstop>
+ </tabstops>
+ <resources>
+  <include location="main_window.qrc"/>
+ </resources>
+ <connections/>
+</ui>
